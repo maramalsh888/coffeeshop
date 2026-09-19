@@ -3,183 +3,205 @@
 <head>
     <meta charset="UTF-8">
 
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <meta
         name="description"
-        content="Bean & Brew — specialty coffee, handcrafted drinks, desserts, and beautiful moments."
+        content="Bean & Brew — specialty coffee, handcrafted drinks, desserts, and beautiful moments in Sana'a."
     >
 
-    <meta name="theme-color" content="#171311">
+    <meta name="theme-color" content="#f6f1e9">
 
     <title>Bean & Brew — Specialty Coffee</title>
 
-    <!-- Google Fonts -->
+    <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 
     <link
-        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600;700&family=Manrope:wght@400;500;600;700;800&display=swap"
         rel="stylesheet"
     >
 
-    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
 
     <!-- ================= LOADER ================= -->
-
     <div class="loader">
-        <div class="loader-logo">Bean & Brew</div>
-
-        <div class="loader-line">
-            <span></span>
+        <div class="loader-inner">
+            <span class="loader-logo">Bean <i>&</i> Brew</span>
+            <span class="loader-line"></span>
+            <span class="loader-caption">Specialty Coffee</span>
         </div>
     </div>
 
-
     <!-- ================= SCROLL PROGRESS ================= -->
-
     <div class="scroll-progress"></div>
 
 
     <!-- ================= NAVBAR ================= -->
-
     <header class="navbar">
 
-        <a href="#home" class="logo">
-            Bean <span>&</span> Brew
-        </a>
+        <div class="nav-container">
 
-        <nav class="desktop-nav">
-
-            <a href="#home" class="nav-link active">Home</a>
-
-            <a href="#menu" class="nav-link">Menu</a>
-
-            <a href="#story" class="nav-link">Our Story</a>
-
-            <a href="#reviews" class="nav-link">Reviews</a>
-
-            <a href="#visit" class="nav-link">Visit</a>
-
-        </nav>
-
-        <div class="nav-actions">
-
-            <button
-                class="cart-button"
-                id="cartButton"
-                aria-label="Open shopping cart"
-            >
-                <span class="cart-icon">🛒</span>
-                <span class="cart-count" id="cartCount">0</span>
-            </button>
-
-            <a href="#reservation" class="nav-cta">
-                Reserve a Table
+            <a href="#home" class="logo">
+                <span>Bean</span>
+                <em>&</em>
+                <span>Brew</span>
             </a>
+
+            <nav class="desktop-nav">
+                <a href="#home" class="nav-link active">Home</a>
+                <a href="#menu" class="nav-link">Menu</a>
+                <a href="#story" class="nav-link">Our Story</a>
+                <a href="#reviews" class="nav-link">Reviews</a>
+                <a href="#visit" class="nav-link">Visit</a>
+            </nav>
+
+            <div class="nav-actions">
+
+                <button
+                    class="cart-button"
+                    id="cartButton"
+                    aria-label="Open shopping cart"
+                >
+                    <span class="cart-icon">○</span>
+                    <span>Order</span>
+                    <b id="cartCount" aria-live="polite">0</b>
+                </button>
+
+                <a href="#reservation" class="nav-reserve">
+                    Reserve a Table
+                    <span>↗</span>
+                </a>
+
+                <button
+                    class="menu-toggle"
+                    aria-label="Open navigation"
+                    aria-expanded="false"
+                >
+                    <span></span>
+                    <span></span>
+                </button>
+
+            </div>
 
         </div>
 
 
-        <!-- Mobile menu button -->
+        <!-- MOBILE NAV -->
+        <div class="mobile-nav">
 
-        <button
-            class="menu-toggle"
-            aria-label="Open navigation"
-            aria-expanded="false"
-        >
-            <span></span>
-            <span></span>
-        </button>
+            <div class="mobile-nav-inner">
+
+                <a href="#home" class="mobile-nav-link">
+                    <span>01</span>
+                    Home
+                </a>
+
+                <a href="#menu" class="mobile-nav-link">
+                    <span>02</span>
+                    Menu
+                </a>
+
+                <a href="#story" class="mobile-nav-link">
+                    <span>03</span>
+                    Our Story
+                </a>
+
+                <a href="#reviews" class="mobile-nav-link">
+                    <span>04</span>
+                    Reviews
+                </a>
+
+                <a href="#visit" class="mobile-nav-link">
+                    <span>05</span>
+                    Visit
+                </a>
+
+                <a href="#reservation" class="mobile-reserve">
+                    Reserve a Table
+                    <span>↗</span>
+                </a>
+
+            </div>
+
+        </div>
 
     </header>
 
 
-    <!-- ================= MOBILE NAV ================= -->
-
-    <div class="mobile-nav" id="mobileNav">
-
-        <a href="#home" class="mobile-nav-link">Home</a>
-
-        <a href="#menu" class="mobile-nav-link">Menu</a>
-
-        <a href="#story" class="mobile-nav-link">Our Story</a>
-
-        <a href="#reviews" class="mobile-nav-link">Reviews</a>
-
-        <a href="#visit" class="mobile-nav-link">Visit</a>
-
-        <a href="#reservation" class="mobile-nav-link mobile-book">
-            Reserve a Table
-        </a>
-
-    </div>
-
-
-    <!-- ================= MAIN ================= -->
-
     <main>
 
-        <!-- ================= HERO ================= -->
 
+        <!-- ================= HERO ================= -->
         <section class="hero" id="home">
+
+            <div class="hero-image"></div>
 
             <div class="hero-overlay"></div>
 
-            <div class="grain"></div>
+            <div class="hero-container">
 
-            <div class="hero-content reveal">
+                <div class="hero-content reveal">
 
-                <p class="eyebrow">
-                    SPECIALTY COFFEE · SANA'A
-                </p>
+                    <div class="hero-eyebrow">
+                        <span></span>
+                        SPECIALTY COFFEE · SANA'A
+                    </div>
 
-                <h1>
-                    A beautiful moment,
-                    <em>one cup at a time.</em>
-                </h1>
+                    <h1>
+                        A beautiful
+                        <span>moment,</span>
+                        one cup at a time.
+                    </h1>
 
-                <p class="hero-text">
-                    Carefully selected beans, handcrafted drinks,
-                    and a warm space made for slowing down.
-                </p>
+                    <p>
+                        Thoughtfully brewed coffee, warm spaces,
+                        and little moments worth slowing down for.
+                    </p>
 
-                <div class="hero-buttons">
+                    <div class="hero-actions">
 
-                    <a href="#menu" class="main-btn">
-                        Explore Menu
-                        <span>↗</span>
-                    </a>
+                        <a href="#menu" class="button button-light">
+                            Explore the Menu
+                            <span>↗</span>
+                        </a>
 
-                    <a href="#story" class="text-btn">
-                        Discover our story
-                    </a>
+                        <a href="#story" class="text-button">
+                            Discover our story
+                            <span>→</span>
+                        </a>
+
+                    </div>
 
                 </div>
 
-            </div>
 
+                <!-- HERO COFFEE -->
+                <div class="hero-coffee reveal">
 
-            <div class="hero-coffee reveal">
+                    <div class="hero-coffee-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1509042239860-f550ce710b93?auto=format&fit=crop&w=900&q=90"
+                            alt="Freshly brewed coffee"
+                        >
+                    </div>
 
-                <div class="coffee-ring"></div>
+                    <div class="hero-coffee-caption">
+                        <div>
+                            <small>01</small>
+                            <span>Freshly brewed</span>
+                        </div>
 
-                <img
-                    src="https://images.unsplash.com/photo-1495474472287-4d71bcdd2085?auto=format&fit=crop&w=900&q=85"
-                    alt="Freshly brewed coffee"
-                >
+                        <div class="caption-line"></div>
 
-                <div class="coffee-caption">
-
-                    <span>01</span>
-
-                    <div>
-                        <strong>Freshly brewed</strong>
-                        <small>Every single morning</small>
+                        <small>EVERY MORNING</small>
                     </div>
 
                 </div>
@@ -189,433 +211,495 @@
 
             <div class="hero-bottom">
 
-                <span>SCROLL TO EXPLORE</span>
+                <a href="#intro" class="scroll-link">
+                    <span class="scroll-circle">↓</span>
+                    Scroll to explore
+                </a>
 
-                <div class="scroll-line"></div>
-
-                <span>EST. 2020</span>
+                <span class="hero-est">
+                    EST. 2020
+                </span>
 
             </div>
 
         </section>
+
 
 
         <!-- ================= INTRO ================= -->
+        <section class="intro section-padding" id="intro">
 
-        <section class="intro section-padding">
+            <div class="container intro-grid">
 
-            <div class="section-label reveal">
-                A BETTER COFFEE EXPERIENCE
-            </div>
+                <div class="section-label reveal">
+                    <span>01</span>
+                    THE BEAN & BREW EXPERIENCE
+                </div>
 
-            <div class="intro-content reveal">
+                <div class="intro-content reveal">
 
-                <h2>
-                    Not just another
-                    <em>coffee shop.</em>
-                </h2>
+                    <h2>
+                        Coffee should feel
+                        <i>like a moment.</i>
+                    </h2>
 
-                <p>
-                    Bean & Brew is a place for good coffee, meaningful
-                    conversations, quiet mornings, and moments worth
-                    slowing down for.
-                </p>
+                    <p>
+                        From the first aroma to the final sip,
+                        everything at Bean & Brew is created with
+                        intention. Simple ingredients, beautiful
+                        surroundings, and coffee made to be enjoyed slowly.
+                    </p>
+
+                    <a href="#story" class="line-link">
+                        More about us
+                        <span>↗</span>
+                    </a>
+
+                </div>
 
             </div>
 
         </section>
+
 
 
         <!-- ================= MENU ================= -->
-
         <section class="menu-section section-padding" id="menu">
 
-            <div class="section-heading reveal">
+            <div class="container">
 
-                <div>
+                <div class="section-heading reveal">
 
-                    <p class="section-label">
-                        OUR MENU
+                    <div>
+                        <div class="section-kicker">
+                            OUR MENU
+                        </div>
+
+                        <h2>
+                            Made for your
+                            <i>kind of moment.</i>
+                        </h2>
+                    </div>
+
+                    <p>
+                        Carefully crafted coffee, refreshing drinks,
+                        and something sweet to complete the moment.
                     </p>
 
-                    <h2>
-                        Made with
-                        <em>intention.</em>
-                    </h2>
-
-                </div>
-
-                <p>
-                    From classic espresso drinks to refreshing cold
-                    brews and something sweet on the side.
-                </p>
-
-            </div>
-
-
-            <!-- Search -->
-
-            <div class="menu-tools reveal">
-
-                <div class="search-box">
-
-                    <span>⌕</span>
-
-                    <input
-                        type="text"
-                        id="menuSearch"
-                        placeholder="Search the menu..."
-                        autocomplete="off"
-                    >
-
                 </div>
 
 
-                <!-- Filters -->
+                <!-- MENU TOOLBAR -->
+                <div class="menu-toolbar reveal">
 
-                <div class="category-filters">
+                    <div class="search-box">
+                        <span>⌕</span>
 
-                    <button
-                        class="filter-btn active"
-                        data-category="all"
-                    >
-                        All
-                    </button>
+                        <input
+                            type="search"
+                            id="menuSearch"
+                            placeholder="Search our menu..."
+                            aria-label="Search menu"
+                        >
+                    </div>
 
-                    <button
-                        class="filter-btn"
-                        data-category="coffee"
-                    >
-                        Coffee
-                    </button>
 
-                    <button
-                        class="filter-btn"
-                        data-category="non-coffee"
-                    >
-                        Non-Coffee
-                    </button>
+                    <div class="filters">
 
-                    <button
-                        class="filter-btn"
-                        data-category="cold"
-                    >
-                        Cold
-                    </button>
+                        <button
+                            class="filter-btn active"
+                            data-category="all"
+                        >
+                            All
+                        </button>
 
-                    <button
-                        class="filter-btn"
-                        data-category="dessert"
-                    >
-                        Desserts
-                    </button>
+                        <button
+                            class="filter-btn"
+                            data-category="coffee"
+                        >
+                            Coffee
+                        </button>
 
+                        <button
+                            class="filter-btn"
+                            data-category="non-coffee"
+                        >
+                            Non-Coffee
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-category="cold"
+                        >
+                            Cold
+                        </button>
+
+                        <button
+                            class="filter-btn"
+                            data-category="dessert"
+                        >
+                            Desserts
+                        </button>
+
+                    </div>
+
+                </div>
+
+
+                <!-- MENU GRID -->
+                <div class="menu-grid" id="menuGrid"></div>
+
+                <div class="no-results" id="noResults">
+                    <span>☕</span>
+                    <h3>No drinks found</h3>
+                    <p>Try another search or category.</p>
                 </div>
 
             </div>
-
-
-            <!-- Dynamic menu -->
-
-            <div class="menu-grid" id="menuGrid"></div>
-
-            <p class="no-results" id="noResults">
-                No menu items found.
-            </p>
 
         </section>
+
 
 
         <!-- ================= MARQUEE ================= -->
-
-        <section class="marquee">
+        <div class="marquee">
 
             <div class="marquee-track">
 
-                <span>FRESHLY ROASTED</span>
-                <b>✦</b>
+                <span>GOOD COFFEE</span>
+                <i>✦</i>
+                <span>SLOW MOMENTS</span>
+                <i>✦</i>
+                <span>BEAUTIFUL DAYS</span>
+                <i>✦</i>
 
-                <span>CAREFULLY BREWED</span>
-                <b>✦</b>
-
-                <span>LOCALLY LOVED</span>
-                <b>✦</b>
-
-                <span>FRESHLY ROASTED</span>
-                <b>✦</b>
-
-                <span>CAREFULLY BREWED</span>
-                <b>✦</b>
-
-                <span>LOCALLY LOVED</span>
-                <b>✦</b>
+                <span>GOOD COFFEE</span>
+                <i>✦</i>
+                <span>SLOW MOMENTS</span>
+                <i>✦</i>
+                <span>BEAUTIFUL DAYS</span>
+                <i>✦</i>
 
             </div>
 
-        </section>
+        </div>
+
 
 
         <!-- ================= STORY ================= -->
-
         <section class="story section-padding" id="story">
 
-            <div class="story-image reveal">
+            <div class="container story-grid">
 
-                <img
-                    src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=85"
-                    alt="Bean and Brew coffee shop interior"
-                >
+                <div class="story-image-wrap reveal">
 
-                <div class="story-tag">
-                    BEAN & BREW
-                    <span>SINCE 2020</span>
+                    <div class="story-image">
+                        <img
+                            src="https://images.unsplash.com/photo-1445116572660-236099ec97a0?auto=format&fit=crop&w=1200&q=90"
+                            alt="Bean & Brew coffee shop"
+                            loading="lazy"
+                        >
+                    </div>
+
+                    <div class="story-tag">
+                        <span>EST.</span>
+                        <strong>2020</strong>
+                    </div>
+
+                </div>
+
+
+                <div class="story-content reveal">
+
+                    <div class="section-kicker">
+                        OUR STORY
+                    </div>
+
+                    <h2>
+                        Born from a love
+                        of <i>good coffee.</i>
+                    </h2>
+
+                    <p>
+                        Bean & Brew began with a simple idea:
+                        create a place where great coffee and
+                        beautiful everyday moments could meet.
+                    </p>
+
+                    <p>
+                        Today, every cup is still prepared with
+                        the same attention to detail — from the
+                        beans we choose to the way we welcome you.
+                    </p>
+
+                    <a href="#visit" class="button button-dark">
+                        Come visit us
+                        <span>↗</span>
+                    </a>
+
                 </div>
 
             </div>
 
-
-            <div class="story-content reveal">
-
-                <p class="section-label">
-                    OUR STORY
-                </p>
-
-                <h2>
-                    A little slower.
-                    <em>A lot better.</em>
-                </h2>
-
-                <p>
-                    We believe coffee should be more than something
-                    you quickly grab on your way somewhere.
-                </p>
-
-                <p>
-                    That's why we created Bean & Brew — a comfortable
-                    place where carefully brewed coffee meets warm
-                    hospitality and simple, beautiful design.
-                </p>
-
-                <a href="#visit" class="text-btn">
-                    Come see for yourself ↗
-                </a>
-
-            </div>
-
         </section>
+
 
 
         <!-- ================= STATS ================= -->
+        <section class="stats-section">
 
-        <section class="stats">
+            <div class="container stats-grid">
 
-            <div class="stat reveal">
-                <strong>12K<span>+</span></strong>
-                <p>Cups served</p>
-            </div>
+                <div class="stat reveal">
+                    <strong>20+</strong>
+                    <span>Signature drinks</span>
+                </div>
 
-            <div class="stat reveal">
-                <strong>18</strong>
-                <p>Signature drinks</p>
-            </div>
+                <div class="stat reveal">
+                    <strong>5★</strong>
+                    <span>Guest experience</span>
+                </div>
 
-            <div class="stat reveal">
-                <strong>4.9<span>★</span></strong>
-                <p>Guest rating</p>
-            </div>
+                <div class="stat reveal">
+                    <strong>100%</strong>
+                    <span>Made with care</span>
+                </div>
 
-            <div class="stat reveal">
-                <strong>6</strong>
-                <p>Days a week</p>
+                <div class="stat reveal">
+                    <strong>2020</strong>
+                    <span>Our beginning</span>
+                </div>
+
             </div>
 
         </section>
+
 
 
         <!-- ================= REVIEWS ================= -->
-
         <section class="reviews section-padding" id="reviews">
 
-            <div class="section-heading reveal">
+            <div class="container">
 
-                <div>
+                <div class="section-heading centered reveal">
 
-                    <p class="section-label">
-                        GUEST NOTES
-                    </p>
+                    <div>
 
-                    <h2>
-                        Loved by
-                        <em>coffee people.</em>
-                    </h2>
+                        <div class="section-kicker">
+                            KIND WORDS
+                        </div>
+
+                        <h2>
+                            Loved one cup
+                            <i>at a time.</i>
+                        </h2>
+
+                    </div>
+
+                </div>
+
+
+                <div class="reviews-grid">
+
+                    <article class="review-card reveal">
+
+                        <div class="review-top">
+                            <div class="stars">★★★★★</div>
+                            <span>01</span>
+                        </div>
+
+                        <blockquote>
+                            “The atmosphere is beautiful,
+                            the coffee is amazing, and every
+                            little detail feels thoughtful.”
+                        </blockquote>
+
+                        <div class="review-author">
+                            <span class="author-avatar">A</span>
+
+                            <div>
+                                <strong>Amal</strong>
+                                <small>Local guest</small>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <article class="review-card featured reveal">
+
+                        <div class="review-top">
+                            <div class="stars">★★★★★</div>
+                            <span>02</span>
+                        </div>
+
+                        <blockquote>
+                            “One of those places where you
+                            immediately want to stay for
+                            another cup.”
+                        </blockquote>
+
+                        <div class="review-author">
+                            <span class="author-avatar">S</span>
+
+                            <div>
+                                <strong>Sarah</strong>
+                                <small>Coffee lover</small>
+                            </div>
+                        </div>
+
+                    </article>
+
+
+                    <article class="review-card reveal">
+
+                        <div class="review-top">
+                            <div class="stars">★★★★★</div>
+                            <span>03</span>
+                        </div>
+
+                        <blockquote>
+                            “Perfect for a quiet morning,
+                            a conversation, or simply
+                            enjoying your coffee.”
+                        </blockquote>
+
+                        <div class="review-author">
+                            <span class="author-avatar">M</span>
+
+                            <div>
+                                <strong>Mohammed</strong>
+                                <small>Regular guest</small>
+                            </div>
+                        </div>
+
+                    </article>
 
                 </div>
 
             </div>
 
-
-            <div class="reviews-grid">
-
-                <article class="review-card reveal">
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <p>
-                        “The latte was smooth, the atmosphere was
-                        beautiful, and it was exactly the kind of
-                        quiet morning I needed.”
-                    </p>
-
-                    <strong>— Sara M.</strong>
-
-                </article>
-
-
-                <article class="review-card reveal">
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <p>
-                        “Really lovely coffee and a relaxed atmosphere.
-                        The cappuccino is definitely worth trying.”
-                    </p>
-
-                    <strong>— Ahmed K.</strong>
-
-                </article>
-
-
-                <article class="review-card reveal">
-
-                    <div class="stars">
-                        ★★★★★
-                    </div>
-
-                    <p>
-                        “Beautiful place, friendly service, and the
-                        mocha is fantastic. I keep coming back.”
-                    </p>
-
-                    <strong>— Lina A.</strong>
-
-                </article>
-
-            </div>
-
         </section>
+
 
 
         <!-- ================= GALLERY ================= -->
+        <section class="gallery-section section-padding">
 
-        <section class="gallery section-padding">
+            <div class="container">
 
-            <div class="section-heading reveal">
+                <div class="gallery-heading reveal">
 
-                <div>
+                    <div>
 
-                    <p class="section-label">
-                        INSIDE BEAN & BREW
-                    </p>
+                        <div class="section-kicker">
+                            INSIDE BEAN & BREW
+                        </div>
 
-                    <h2>
-                        Come for the coffee.
-                        <em>Stay for the moment.</em>
-                    </h2>
+                        <h2>
+                            A space made for
+                            <i>slow moments.</i>
+                        </h2>
+
+                    </div>
+
+                    <span>@beanandbrew</span>
 
                 </div>
 
-            </div>
 
+                <div class="gallery-grid">
 
-            <div class="gallery-grid">
+                    <div class="gallery-item gallery-large reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=90"
+                            alt="Coffee shop interior"
+                            loading="lazy"
+                        >
+                    </div>
 
-                <img
-                    class="gallery-large reveal"
-                    src="https://images.unsplash.com/photo-1501339847302-ac426a4a7cbb?auto=format&fit=crop&w=1200&q=85"
-                    alt="Coffee shop"
-                    loading="lazy"
-                >
+                    <div class="gallery-item reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=900&q=90"
+                            alt="Coffee and pastry"
+                            loading="lazy"
+                        >
+                    </div>
 
-                <img
-                    class="reveal"
-                    src="https://images.unsplash.com/photo-1511081692775-05d0f180a065?auto=format&fit=crop&w=900&q=85"
-                    alt="Coffee cup"
-                    loading="lazy"
-                >
+                    <div class="gallery-item reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=90"
+                            alt="Latte art"
+                            loading="lazy"
+                        >
+                    </div>
 
-                <img
-                    class="reveal"
-                    src="https://images.unsplash.com/photo-1514432324607-a09d9b4aefdd?auto=format&fit=crop&w=900&q=85"
-                    alt="Fresh coffee"
-                    loading="lazy"
-                >
+                    <div class="gallery-item gallery-wide reveal">
+                        <img
+                            src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=1200&q=90"
+                            alt="Fresh coffee"
+                            loading="lazy"
+                        >
+                    </div>
 
-                <img
-                    class="reveal"
-                    src="https://images.unsplash.com/photo-1498804103079-a6351b050096?auto=format&fit=crop&w=900&q=85"
-                    alt="Coffee and pastry"
-                    loading="lazy"
-                >
+                </div>
 
             </div>
 
         </section>
 
 
-        <!-- ================= RESERVATION ================= -->
 
+        <!-- ================= RESERVATION ================= -->
         <section class="reservation section-padding" id="reservation">
 
-            <div class="reservation-box reveal">
+            <div class="container reservation-grid">
 
-                <div class="reservation-info">
+                <div class="reservation-info reveal">
 
-                    <p class="section-label">
-                        YOUR TABLE IS WAITING
-                    </p>
+                    <div class="section-kicker">
+                        YOUR TABLE AWAITS
+                    </div>
 
                     <h2>
-                        Plan your
-                        <em>coffee moment.</em>
+                        Make room for
+                        <i>a beautiful moment.</i>
                     </h2>
 
                     <p>
-                        Tell us when you'd like to visit and we'll
-                        prepare a reservation request for you.
+                        Planning a quiet coffee, a catch-up with
+                        friends, or a special evening?
+                        Reserve your table with us.
                     </p>
+
+                    <div class="reservation-note">
+                        <span>✦</span>
+                        Reservations are confirmed through WhatsApp.
+                    </div>
 
                 </div>
 
 
-                <form id="reservationForm" class="reservation-form">
+                <form
+                    class="reservation-form reveal"
+                    id="reservationForm"
+                >
 
                     <div class="form-row">
 
-                        <div class="form-group">
-
-                            <label for="guestName">
-                                Name
-                            </label>
+                        <label>
+                            Your name
 
                             <input
                                 type="text"
                                 id="guestName"
-                                placeholder="Your name"
+                                placeholder="Enter your name"
                                 required
                             >
+                        </label>
 
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="guestPhone">
-                                Phone
-                            </label>
+                        <label>
+                            Phone number
 
                             <input
                                 type="tel"
@@ -623,99 +707,57 @@
                                 placeholder="Your phone number"
                                 required
                             >
-
-                        </div>
+                        </label>
 
                     </div>
 
 
                     <div class="form-row">
 
-                        <div class="form-group">
-
-                            <label for="reservationDate">
-                                Date
-                            </label>
+                        <label>
+                            Date
 
                             <input
                                 type="date"
                                 id="reservationDate"
                                 required
                             >
+                        </label>
 
-                        </div>
-
-
-                        <div class="form-group">
-
-                            <label for="reservationTime">
-                                Time
-                            </label>
+                        <label>
+                            Time
 
                             <input
                                 type="time"
                                 id="reservationTime"
                                 required
                             >
-
-                        </div>
-
-                    </div>
-
-
-                    <div class="form-group">
-
-                        <label for="guestCount">
-                            Guests
                         </label>
 
-                        <select id="guestCount" required>
-
-                            <option value="1">
-                                1 Guest
-                            </option>
-
-                            <option value="2" selected>
-                                2 Guests
-                            </option>
-
-                            <option value="3">
-                                3 Guests
-                            </option>
-
-                            <option value="4">
-                                4 Guests
-                            </option>
-
-                            <option value="5">
-                                5 Guests
-                            </option>
-
-                            <option value="6">
-                                6 Guests
-                            </option>
-
-                            <option value="7">
-                                7 Guests
-                            </option>
-
-                            <option value="8">
-                                8 Guests
-                            </option>
-
-                        </select>
-
                     </div>
 
 
-                    <button type="submit" class="main-btn form-submit">
-                        Request Reservation
+                    <label>
+                        Number of guests
+
+                        <select id="guestCount" required>
+                            <option value="">Select guests</option>
+                            <option value="1">1 guest</option>
+                            <option value="2">2 guests</option>
+                            <option value="3">3 guests</option>
+                            <option value="4">4 guests</option>
+                            <option value="5">5 guests</option>
+                            <option value="6">6 guests</option>
+                            <option value="7+">7+ guests</option>
+                        </select>
+
+                    </label>
+
+
+                    <button type="submit" class="button button-dark form-submit">
+                        Request a reservation
                         <span>↗</span>
                     </button>
-
-                    <p class="form-note">
-                        Your request will open WhatsApp with the reservation details.
-                    </p>
 
                 </form>
 
@@ -724,82 +766,76 @@
         </section>
 
 
-        <!-- ================= VISIT ================= -->
 
+        <!-- ================= VISIT ================= -->
         <section class="visit section-padding" id="visit">
 
-            <div class="visit-content reveal">
+            <div class="container visit-grid">
 
-                <p class="section-label">
-                    FIND US
-                </p>
+                <div class="visit-title reveal">
 
-                <h2>
-                    Your table is
-                    <em>waiting.</em>
-                </h2>
+                    <div class="section-kicker">
+                        COME SAY HELLO
+                    </div>
 
-                <p>
-                    Drop by for your morning coffee, an afternoon
-                    catch-up, or a quiet evening with something sweet.
-                </p>
+                    <h2>
+                        Find us in
+                        <i>Sana'a.</i>
+                    </h2>
 
-                <a
-                    href="https://www.google.com/maps/search/?api=1&query=Sana'a%2C%20Yemen"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="main-btn"
-                >
-                    Get Directions
-                    <span>↗</span>
-                </a>
-
-            </div>
-
-
-            <div class="visit-details reveal">
-
-                <div class="detail">
-
-                    <span>LOCATION</span>
-
-                    <strong>
-                        Sana'a, Yemen
-                    </strong>
+                    <a
+                        href="https://www.google.com/maps/search/?api=1&query=Sana'a%2C%20Yemen"
+                        target="_blank"
+                        rel="noopener"
+                        class="line-link"
+                    >
+                        Get directions
+                        <span>↗</span>
+                    </a>
 
                 </div>
 
 
-                <div class="detail">
+                <div class="visit-details reveal">
 
-                    <span>OPENING HOURS</span>
+                    <div class="visit-detail">
+                        <span>01</span>
 
-                    <strong>
-                        Sunday — Friday
-                        <br>
-                        8:00 AM — 10:00 PM
-                    </strong>
-
-                </div>
+                        <div>
+                            <small>LOCATION</small>
+                            <p>Sana'a, Yemen</p>
+                        </div>
+                    </div>
 
 
-                <div class="detail">
+                    <div class="visit-detail">
+                        <span>02</span>
 
-                    <span>CONTACT</span>
+                        <div>
+                            <small>OPENING HOURS</small>
+                            <p>Every day · 8:00 AM — 11:00 PM</p>
+                        </div>
+                    </div>
 
-                    <strong>
 
-                        <a href="tel:+967000000000">
-                            +967 00 000 0000
-                        </a>
+                    <div class="visit-detail">
+                        <span>03</span>
 
-                        <br>
+                        <div>
+                            <small>PHONE</small>
+                            <p>+967 000 000 000</p>
+                        </div>
+                    </div>
 
-                        <a href="mailto:hello@beanandbrew.com">
-                            hello@beanandbrew.com
-                        </a>
 
-                    </strong>
+                    <div class="visit-detail">
+                        <span>04</span>
+
+                        <div>
+                            <small>EMAIL</small>
+                            <p>hello@beanandbrew.com</p>
+                        </div>
+                    </div>
 
                 </div>
 
@@ -810,28 +846,24 @@
     </main>
 
 
-    <!-- ================= CART ================= -->
 
+    <!-- ================= CART OVERLAY ================= -->
     <div class="cart-overlay" id="cartOverlay"></div>
 
 
+    <!-- ================= CART DRAWER ================= -->
     <aside class="cart-drawer" id="cartDrawer">
 
         <div class="cart-header">
 
             <div>
-                <p class="section-label">
-                    YOUR ORDER
-                </p>
-
-                <h3>
-                    Shopping Cart
-                </h3>
+                <span>Your order</span>
+                <h2>Your coffee <i>selection.</i></h2>
             </div>
 
             <button
-                class="close-cart"
                 id="closeCart"
+                class="close-cart"
                 aria-label="Close cart"
             >
                 ×
@@ -840,157 +872,128 @@
         </div>
 
 
-        <div class="cart-items" id="cartItems"></div>
+        <div class="cart-body">
 
+            <div id="cartItems"></div>
 
-        <div class="empty-cart" id="emptyCart">
+            <div class="empty-cart" id="emptyCart">
 
-            <div class="empty-cart-icon">
-                ☕
+                <div class="empty-cart-icon">☕</div>
+
+                <h3>Your order is empty</h3>
+
+                <p>
+                    Choose something delicious
+                    from our menu.
+                </p>
+
+                <button id="browseMenu" class="button button-dark">
+                    Browse menu
+                </button>
+
             </div>
-
-            <h4>
-                Your cart is empty
-            </h4>
-
-            <p>
-                Add something delicious from our menu.
-            </p>
-
-            <button
-                class="text-btn"
-                id="browseMenu"
-            >
-                Browse Menu ↗
-            </button>
 
         </div>
 
 
         <div class="cart-footer">
 
-            <div class="cart-total">
-
+            <div class="cart-total-row">
                 <span>Total</span>
-
-                <strong id="cartTotal">
-                    $0.00
-                </strong>
-
+                <strong id="cartTotal">$0.00</strong>
             </div>
 
             <button
-                class="main-btn order-whatsapp"
                 id="orderWhatsapp"
+                class="whatsapp-button"
             >
-                Order via WhatsApp
+                Order through WhatsApp
                 <span>↗</span>
             </button>
 
-            <p>
-                Your order will open in WhatsApp for confirmation.
-            </p>
+            <small>
+                We'll confirm your order through WhatsApp.
+            </small>
 
         </div>
 
     </aside>
 
 
-    <!-- ================= TOAST ================= -->
 
-    <div class="toast" id="toast">
-        Added to your cart ✓
-    </div>
+    <!-- ================= TOAST ================= -->
+    <div class="toast" id="toast"></div>
+
 
 
     <!-- ================= FOOTER ================= -->
-
     <footer class="footer">
 
-        <div class="footer-main">
+        <div class="container">
 
-            <div class="footer-brand">
+            <div class="footer-main">
 
-                <a href="#home" class="logo">
-                    Bean <span>&</span> Brew
-                </a>
+                <div class="footer-brand">
 
-                <p>
-                    Good coffee.
-                    <br>
-                    Better moments.
-                </p>
+                    <a href="#home" class="footer-logo">
+                        Bean <i>&</i> Brew
+                    </a>
 
-            </div>
-
-
-            <div class="footer-links">
-
-                <div>
-
-                    <span>EXPLORE</span>
-
-                    <a href="#home">Home</a>
-
-                    <a href="#menu">Menu</a>
-
-                    <a href="#story">Our Story</a>
+                    <p>
+                        Specialty coffee, beautiful moments,
+                        and a place to slow down.
+                    </p>
 
                 </div>
 
 
-                <div>
+                <div class="footer-links">
 
-                    <span>VISIT</span>
+                    <div>
+                        <span>EXPLORE</span>
 
-                    <a href="#reviews">Reviews</a>
+                        <a href="#menu">Menu</a>
+                        <a href="#story">Our Story</a>
+                        <a href="#reviews">Reviews</a>
+                    </div>
 
-                    <a href="#reservation">Reserve</a>
+                    <div>
+                        <span>VISIT</span>
 
-                    <a href="#visit">Find Us</a>
+                        <a href="#visit">Location</a>
+                        <a href="#reservation">Reservations</a>
 
-                </div>
-
-
-                <div>
-
-                    <span>SAY HELLO</span>
-
-                    <a href="mailto:hello@beanandbrew.com">
-                        Email Us
-                    </a>
-
-                    <a href="tel:+967000000000">
-                        Call Us
-                    </a>
-
-                    <a href="#" id="footerWhatsapp">
-                        WhatsApp
-                    </a>
+                        <a
+                            href="#"
+                            id="footerWhatsapp"
+                        >
+                            WhatsApp
+                        </a>
+                    </div>
 
                 </div>
 
             </div>
 
-        </div>
 
+            <div class="footer-bottom">
 
-        <div class="footer-bottom">
+                <span>
+                    © 2026 Bean & Brew
+                </span>
 
-            <span>
-                © 2026 Bean & Brew
-            </span>
+                <span>
+                    Crafted with care in Sana'a
+                </span>
 
-            <span>
-                Designed with coffee & creativity.
-            </span>
+            </div>
 
         </div>
 
     </footer>
 
 
-    <!-- JavaScript -->
+
     <script src="script.js"></script>
 
 </body>

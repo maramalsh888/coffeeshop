@@ -1,28 +1,19 @@
 /* =========================================================
    BEAN & BREW
-   Main JavaScript
+   Premium Coffee Website
 ========================================================= */
 
 
-/* ================= BUSINESS SETTINGS ================= */
+/* =========================================================
+   BUSINESS SETTINGS
+========================================================= */
 
-/*
-    IMPORTANT:
-    Replace this number with the real Bean & Brew WhatsApp number.
-
-    Format:
-    Country code + number
-    WITHOUT +, spaces, or dashes.
-
-    Example:
-    Yemen:
-    9677XXXXXXXX
-*/
-
-const WHATSAPP_NUMBER = "967000000000";
+const WHATSAPP_NUMBER = "967770086747";
 
 
-/* ================= MENU DATA ================= */
+/* =========================================================
+   MENU DATA
+========================================================= */
 
 const menuItems = [
 
@@ -31,8 +22,10 @@ const menuItems = [
         name: "Espresso",
         category: "coffee",
         price: 2.50,
-        description: "Rich double espresso with a deep, balanced finish.",
-        image: "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Rich double espresso with a deep, balanced finish.",
+        image:
+            "https://images.unsplash.com/photo-1510707577719-ae7c14805e3a?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -40,8 +33,10 @@ const menuItems = [
         name: "Americano",
         category: "coffee",
         price: 3.00,
-        description: "Espresso softened with hot water for a clean finish.",
-        image: "https://images.unsplash.com/photo-1551030173-122aabc4489c?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Espresso softened with hot water for a clean finish.",
+        image:
+            "https://images.unsplash.com/photo-1551030173-122aabc4489c?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -49,8 +44,10 @@ const menuItems = [
         name: "Cappuccino",
         category: "coffee",
         price: 4.00,
-        description: "Espresso with silky milk and a layer of velvet foam.",
-        image: "https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Espresso with silky milk and a layer of velvet foam.",
+        image:
+            "https://images.unsplash.com/photo-1534778101976-62847782c213?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -58,17 +55,23 @@ const menuItems = [
         name: "Classic Latte",
         category: "coffee",
         price: 4.50,
-        description: "Smooth espresso blended with steamed milk.",
-        image: "https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Smooth espresso blended with steamed milk.",
+        image:
+            "https://images.unsplash.com/photo-1561882468-9110e03e0f78?auto=format&fit=crop&w=800&q=90"
     },
+
+    /* ================= CHANGED ================= */
 
     {
         id: 5,
         name: "Dark Mocha",
         category: "coffee",
         price: 4.75,
-        description: "Dark chocolate, espresso, and creamy steamed milk.",
-        image: "https://images.unsplash.com/photo-1578374173705-7c9b6d5c5b8b?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Dark chocolate, espresso, and creamy steamed milk.",
+        image:
+            "https://images.unsplash.com/photo-1572490122747-3968b75cc699?auto=format&fit=crop&w=900&q=90"
     },
 
     {
@@ -76,17 +79,23 @@ const menuItems = [
         name: "Spanish Latte",
         category: "coffee",
         price: 4.75,
-        description: "Espresso, steamed milk, and a touch of sweetened milk.",
-        image: "https://images.unsplash.com/photo-1572449043416-55f4685c9bb7?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Espresso, steamed milk, and a touch of sweetened milk.",
+        image:
+            "https://images.unsplash.com/photo-1511920170033-f8396924c348?auto=format&fit=crop&w=900&q=90"
     },
+
+    /* ================= END CHANGES ================= */
 
     {
         id: 7,
         name: "Matcha Latte",
         category: "non-coffee",
         price: 4.50,
-        description: "Smooth ceremonial-style matcha with creamy milk.",
-        image: "https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Smooth ceremonial-style matcha with creamy milk.",
+        image:
+            "https://images.unsplash.com/photo-1515823662972-da6a2e4d3002?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -94,8 +103,10 @@ const menuItems = [
         name: "Hot Chocolate",
         category: "non-coffee",
         price: 4.00,
-        description: "Rich chocolate blended with warm, creamy milk.",
-        image: "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Rich chocolate blended with warm, creamy milk.",
+        image:
+            "https://images.unsplash.com/photo-1542990253-0d0f5be5f0ed?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -103,8 +114,10 @@ const menuItems = [
         name: "Chai Latte",
         category: "non-coffee",
         price: 4.25,
-        description: "Spiced chai with steamed milk and a warm finish.",
-        image: "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Spiced chai with steamed milk and a warm finish.",
+        image:
+            "https://images.unsplash.com/photo-1571934811356-5cc061b6821f?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -112,8 +125,10 @@ const menuItems = [
         name: "Iced Latte",
         category: "cold",
         price: 4.50,
-        description: "Chilled espresso with cold milk over ice.",
-        image: "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Chilled espresso with cold milk over ice.",
+        image:
+            "https://images.unsplash.com/photo-1517701604599-bb29b565090c?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -121,8 +136,10 @@ const menuItems = [
         name: "Iced Americano",
         category: "cold",
         price: 3.50,
-        description: "Espresso and chilled water served over ice.",
-        image: "https://images.unsplash.com/photo-1517959105821-eaf2591984ca?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Espresso and chilled water served over ice.",
+        image:
+            "https://images.unsplash.com/photo-1517959105821-eaf2591984ca?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -130,8 +147,10 @@ const menuItems = [
         name: "Cold Brew",
         category: "cold",
         price: 4.50,
-        description: "Slow-steeped coffee with a naturally smooth finish.",
-        image: "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Slow-steeped coffee with a naturally smooth finish.",
+        image:
+            "https://images.unsplash.com/photo-1461023058943-07fcbe16d735?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -139,8 +158,10 @@ const menuItems = [
         name: "Cheesecake",
         category: "dessert",
         price: 5.00,
-        description: "Creamy classic cheesecake with a buttery biscuit base.",
-        image: "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Creamy classic cheesecake with a buttery biscuit base.",
+        image:
+            "https://images.unsplash.com/photo-1565958011703-44f9829ba187?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -148,8 +169,10 @@ const menuItems = [
         name: "Chocolate Brownie",
         category: "dessert",
         price: 3.50,
-        description: "Soft, rich chocolate brownie with a fudgy center.",
-        image: "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Soft, rich chocolate brownie with a fudgy center.",
+        image:
+            "https://images.unsplash.com/photo-1564355808539-22fda35bed7e?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -157,8 +180,10 @@ const menuItems = [
         name: "Butter Croissant",
         category: "dessert",
         price: 3.25,
-        description: "Golden, flaky pastry baked fresh for the morning.",
-        image: "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Golden, flaky pastry baked fresh for the morning.",
+        image:
+            "https://images.unsplash.com/photo-1555507036-ab1f4038808a?auto=format&fit=crop&w=800&q=90"
     },
 
     {
@@ -166,22 +191,30 @@ const menuItems = [
         name: "Chocolate Cookie",
         category: "dessert",
         price: 2.75,
-        description: "Soft-baked cookie with generous chocolate pieces.",
-        image: "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=85"
+        description:
+            "Soft-baked cookie with generous chocolate pieces.",
+        image:
+            "https://images.unsplash.com/photo-1499636136210-6f4ee915583e?auto=format&fit=crop&w=800&q=90"
     }
 
 ];
 
 
-/* ================= ELEMENTS ================= */
+/* =========================================================
+   ELEMENTS
+========================================================= */
 
-const loader = document.querySelector(".loader");
+const loader =
+    document.querySelector(".loader");
 
-const navbar = document.querySelector(".navbar");
+const navbar =
+    document.querySelector(".navbar");
 
-const menuToggle = document.querySelector(".menu-toggle");
+const menuToggle =
+    document.querySelector(".menu-toggle");
 
-const mobileNav = document.querySelector(".mobile-nav");
+const mobileNav =
+    document.querySelector(".mobile-nav");
 
 const mobileNavLinks =
     document.querySelectorAll(".mobile-nav-link");
@@ -241,22 +274,30 @@ const footerWhatsapp =
     document.querySelector("#footerWhatsapp");
 
 
-/* ================= LOADER ================= */
+/* =========================================================
+   LOADER
+========================================================= */
 
 window.addEventListener("load", () => {
 
     setTimeout(() => {
 
-        loader.classList.add("hide");
+        if (loader) {
+            loader.classList.add("hide");
+        }
 
     }, 800);
 
 });
 
 
-/* ================= NAVBAR ================= */
+/* =========================================================
+   NAVBAR
+========================================================= */
 
 function updateNavbar() {
+
+    if (!navbar) return;
 
     if (window.scrollY > 40) {
 
@@ -279,9 +320,13 @@ window.addEventListener(
 updateNavbar();
 
 
-/* ================= SCROLL PROGRESS ================= */
+/* =========================================================
+   SCROLL PROGRESS
+========================================================= */
 
 function updateScrollProgress() {
+
+    if (!scrollProgress) return;
 
     const scrollTop =
         window.scrollY;
@@ -297,7 +342,6 @@ function updateScrollProgress() {
 
     scrollProgress.style.width =
         `${progress}%`;
-
 }
 
 window.addEventListener(
@@ -309,9 +353,13 @@ window.addEventListener(
 updateScrollProgress();
 
 
-/* ================= MOBILE MENU ================= */
+/* =========================================================
+   MOBILE MENU
+========================================================= */
 
 function closeMobileMenu() {
+
+    if (!navbar || !menuToggle) return;
 
     navbar.classList.remove("menu-open");
 
@@ -325,29 +373,43 @@ function closeMobileMenu() {
         "Open navigation"
     );
 
+    document.body.classList.remove("no-scroll");
 }
 
-menuToggle.addEventListener(
-    "click",
-    () => {
 
-        const isOpen =
-            navbar.classList.toggle("menu-open");
+if (menuToggle) {
 
-        menuToggle.setAttribute(
-            "aria-expanded",
-            isOpen
-        );
+    menuToggle.addEventListener(
+        "click",
+        () => {
 
-        menuToggle.setAttribute(
-            "aria-label",
-            isOpen
-                ? "Close navigation"
-                : "Open navigation"
-        );
+            const isOpen =
+                navbar.classList.toggle(
+                    "menu-open"
+                );
 
-    }
-);
+            menuToggle.setAttribute(
+                "aria-expanded",
+                String(isOpen)
+            );
+
+            menuToggle.setAttribute(
+                "aria-label",
+                isOpen
+                    ? "Close navigation"
+                    : "Open navigation"
+            );
+
+            document.body.classList.toggle(
+                "no-scroll",
+                isOpen
+            );
+
+        }
+    );
+
+}
+
 
 mobileNavLinks.forEach(link => {
 
@@ -359,7 +421,9 @@ mobileNavLinks.forEach(link => {
 });
 
 
-/* ================= MENU FILTER ================= */
+/* =========================================================
+   MENU FILTER
+========================================================= */
 
 let activeCategory = "all";
 
@@ -367,9 +431,11 @@ let activeCategory = "all";
 function getFilteredItems() {
 
     const searchTerm =
-        menuSearch.value
-            .toLowerCase()
-            .trim();
+        menuSearch
+            ? menuSearch.value
+                .toLowerCase()
+                .trim()
+            : "";
 
     return menuItems.filter(item => {
 
@@ -381,120 +447,36 @@ function getFilteredItems() {
             item.name
                 .toLowerCase()
                 .includes(searchTerm) ||
+
             item.description
                 .toLowerCase()
                 .includes(searchTerm);
 
-        return categoryMatch && searchMatch;
+        return (
+            categoryMatch &&
+            searchMatch
+        );
 
     });
 
 }
 
 
-/* ================= RENDER MENU ================= */
-
-function renderMenu() {
-
-    const items =
-        getFilteredItems();
-
-    menuGrid.innerHTML = "";
-
-    if (items.length === 0) {
-
-        noResults.classList.add("show");
-
-        return;
-
-    }
-
-    noResults.classList.remove("show");
-
-
-    items.forEach((item, index) => {
-
-        const card =
-            document.createElement("article");
-
-        card.className =
-            "menu-card reveal";
-
-        card.innerHTML = `
-
-            <div class="menu-image">
-
-                <img
-                    src="${item.image}"
-                    alt="${item.name}"
-                    loading="lazy"
-                >
-
-                <span class="menu-number">
-                    ${String(index + 1).padStart(2, "0")}
-                </span>
-
-                <span class="menu-category">
-                    ${formatCategory(item.category)}
-                </span>
-
-            </div>
-
-
-            <div class="menu-info">
-
-                <div class="menu-info-top">
-
-                    <h3>
-                        ${item.name}
-                    </h3>
-
-                    <span class="menu-price">
-                        $${item.price.toFixed(2)}
-                    </span>
-
-                </div>
-
-                <p class="menu-description">
-                    ${item.description}
-                </p>
-
-                <button
-                    class="add-cart"
-                    data-id="${item.id}"
-                >
-                    Add to order +
-                </button>
-
-            </div>
-
-        `;
-
-        menuGrid.appendChild(card);
-
-    });
-
-
-    /* Observe new cards */
-
-    observeRevealElements();
-
-}
-
-
-/* ================= CATEGORY NAME ================= */
+/* =========================================================
+   CATEGORY NAME
+========================================================= */
 
 function formatCategory(category) {
 
     const names = {
 
-        "coffee": "Coffee",
+        coffee: "Coffee",
 
         "non-coffee": "Non-Coffee",
 
-        "cold": "Cold",
+        cold: "Cold",
 
-        "dessert": "Dessert"
+        dessert: "Dessert"
 
     };
 
@@ -503,7 +485,103 @@ function formatCategory(category) {
 }
 
 
-/* ================= FILTER BUTTONS ================= */
+/* =========================================================
+   RENDER MENU
+========================================================= */
+
+function renderMenu() {
+
+    if (!menuGrid) return;
+
+    const items =
+        getFilteredItems();
+
+    menuGrid.innerHTML = "";
+
+    if (items.length === 0) {
+
+        noResults?.classList.add("show");
+
+        return;
+
+    }
+
+    noResults?.classList.remove("show");
+
+
+    items.forEach(
+        (item, index) => {
+
+            const card =
+                document.createElement("article");
+
+            card.className =
+                "menu-card reveal";
+
+            card.innerHTML = `
+
+                <div class="menu-image">
+
+                    <img
+                        src="${item.image}"
+                        alt="${item.name}"
+                        loading="lazy"
+                        decoding="async"
+                    >
+
+                    <span class="menu-number">
+                        ${String(index + 1).padStart(2, "0")}
+                    </span>
+
+                    <span class="menu-category">
+                        ${formatCategory(item.category)}
+                    </span>
+
+                </div>
+
+
+                <div class="menu-info">
+
+                    <div class="menu-info-top">
+
+                        <h3>${item.name}</h3>
+
+                        <span class="menu-price">
+                            $${item.price.toFixed(2)}
+                        </span>
+
+                    </div>
+
+
+                    <p class="menu-description">
+                        ${item.description}
+                    </p>
+
+
+                    <button
+                        class="add-cart"
+                        data-id="${item.id}"
+                    >
+                        Add to order +
+                    </button>
+
+                </div>
+            `;
+
+            menuGrid.appendChild(card);
+
+        }
+    );
+
+
+    observeRevealElements();
+
+}
+
+
+/* =========================================================
+   FILTER BUTTONS
+========================================================= */
 
 filterButtons.forEach(button => {
 
@@ -513,11 +591,15 @@ filterButtons.forEach(button => {
 
             filterButtons.forEach(btn => {
 
-                btn.classList.remove("active");
+                btn.classList.remove(
+                    "active"
+                );
 
             });
 
-            button.classList.add("active");
+            button.classList.add(
+                "active"
+            );
 
             activeCategory =
                 button.dataset.category;
@@ -530,19 +612,29 @@ filterButtons.forEach(button => {
 });
 
 
-/* ================= SEARCH ================= */
+/* =========================================================
+   SEARCH
+========================================================= */
 
-menuSearch.addEventListener(
-    "input",
-    renderMenu
-);
+if (menuSearch) {
+
+    menuSearch.addEventListener(
+        "input",
+        renderMenu
+    );
+
+}
 
 
-/* ================= CART ================= */
+/* =========================================================
+   CART
+========================================================= */
 
 let cart =
     JSON.parse(
-        localStorage.getItem("beanBrewCart")
+        localStorage.getItem(
+            "beanBrewCart"
+        )
     ) || [];
 
 
@@ -603,10 +695,38 @@ function addToCart(id) {
         `${item.name} added to your order ✓`
     );
 
+
+    /* Cart animation */
+
+    if (cartButton) {
+
+        cartButton.animate(
+            [
+                {
+                    transform: "scale(1)"
+                },
+                {
+                    transform: "scale(1.08)"
+                },
+                {
+                    transform: "scale(1)"
+                }
+            ],
+            {
+                duration: 350,
+                easing: "ease-out"
+            }
+        );
+
+    }
+
 }
 
 
-function updateQuantity(id, amount) {
+function updateQuantity(
+    id,
+    amount
+) {
 
     const item =
         cart.find(
@@ -650,9 +770,13 @@ function removeFromCart(id) {
 }
 
 
-/* ================= RENDER CART ================= */
+/* =========================================================
+   RENDER CART
+========================================================= */
 
 function renderCart() {
+
+    if (!cartItems) return;
 
     cartItems.innerHTML = "";
 
@@ -660,7 +784,7 @@ function renderCart() {
     if (cart.length === 0) {
 
         emptyCart.style.display =
-            "block";
+            "flex";
 
     } else {
 
@@ -678,7 +802,8 @@ function renderCart() {
     cart.forEach(item => {
 
         total +=
-            item.price * item.quantity;
+            item.price *
+            item.quantity;
 
         count +=
             item.quantity;
@@ -699,7 +824,6 @@ function renderCart() {
                 class="cart-item-image"
             >
 
-
             <div>
 
                 <h4>
@@ -710,12 +834,12 @@ function renderCart() {
                     $${item.price.toFixed(2)}
                 </p>
 
-
                 <div class="quantity-controls">
 
                     <button
                         data-action="decrease"
                         data-id="${item.id}"
+                        aria-label="Decrease quantity"
                     >
                         −
                     </button>
@@ -727,6 +851,7 @@ function renderCart() {
                     <button
                         data-action="increase"
                         data-id="${item.id}"
+                        aria-label="Increase quantity"
                     >
                         +
                     </button>
@@ -734,7 +859,6 @@ function renderCart() {
                 </div>
 
             </div>
-
 
             <button
                 class="remove-item"
@@ -747,21 +871,34 @@ function renderCart() {
         `;
 
 
-        cartItems.appendChild(element);
+        cartItems.appendChild(
+            element
+        );
 
     });
 
 
-    cartCount.textContent =
-        count;
+    if (cartCount) {
 
-    cartTotal.textContent =
-        `$${total.toFixed(2)}`;
+        cartCount.textContent =
+            count;
+
+    }
+
+
+    if (cartTotal) {
+
+        cartTotal.textContent =
+            `$${total.toFixed(2)}`;
+
+    }
 
 }
 
 
-/* ================= CART BUTTON EVENTS ================= */
+/* =========================================================
+   ADD TO CART EVENT
+========================================================= */
 
 document.addEventListener(
     "click",
@@ -783,88 +920,112 @@ document.addEventListener(
 );
 
 
-cartItems.addEventListener(
-    "click",
-    event => {
+/* =========================================================
+   CART CONTROLS
+========================================================= */
 
-        const button =
-            event.target.closest("button");
+if (cartItems) {
 
-        if (!button) return;
+    cartItems.addEventListener(
+        "click",
+        event => {
+
+            const button =
+                event.target.closest(
+                    "button"
+                );
+
+            if (!button) return;
 
 
-        const id =
-            Number(button.dataset.id);
+            const id =
+                Number(button.dataset.id);
 
-        const action =
-            button.dataset.action;
+            const action =
+                button.dataset.action;
 
 
-        if (action === "increase") {
+            if (action === "increase") {
 
-            updateQuantity(id, 1);
+                updateQuantity(id, 1);
+
+            }
+
+            if (action === "decrease") {
+
+                updateQuantity(id, -1);
+
+            }
+
+            if (action === "remove") {
+
+                removeFromCart(id);
+
+            }
 
         }
+    );
 
-        if (action === "decrease") {
-
-            updateQuantity(id, -1);
-
-        }
-
-        if (action === "remove") {
-
-            removeFromCart(id);
-
-        }
-
-    }
-);
+}
 
 
-/* ================= OPEN CART ================= */
+/* =========================================================
+   OPEN / CLOSE CART
+========================================================= */
 
 function openCart() {
 
-    cartDrawer.classList.add("open");
+    closeMobileMenu();
 
-    cartOverlay.classList.add("open");
+    cartDrawer?.classList.add("open");
 
-    document.body.classList.add("no-scroll");
+    cartOverlay?.classList.add("open");
+
+    document.body.classList.add(
+        "no-scroll"
+    );
 
 }
 
-
-/* ================= CLOSE CART ================= */
 
 function closeCartDrawer() {
 
-    cartDrawer.classList.remove("open");
+    cartDrawer?.classList.remove(
+        "open"
+    );
 
-    cartOverlay.classList.remove("open");
+    cartOverlay?.classList.remove(
+        "open"
+    );
 
-    document.body.classList.remove("no-scroll");
+    document.body.classList.remove(
+        "no-scroll"
+    );
 
 }
 
 
-cartButton.addEventListener(
+cartButton?.addEventListener(
     "click",
     openCart
 );
 
-closeCart.addEventListener(
+closeCart?.addEventListener(
     "click",
     closeCartDrawer
 );
 
-cartOverlay.addEventListener(
+cartOverlay?.addEventListener(
     "click",
     closeCartDrawer
 );
 
 
-browseMenu.addEventListener(
+/* =========================================================
+   BROWSE MENU
+========================================================= */
+
+browseMenu?.addEventListener(
     "click",
     () => {
 
@@ -872,7 +1033,7 @@ browseMenu.addEventListener(
 
         document
             .querySelector("#menu")
-            .scrollIntoView({
+            ?.scrollIntoView({
                 behavior: "smooth"
             });
 
@@ -880,14 +1041,14 @@ browseMenu.addEventListener(
 );
 
 
-/* ================= WHATSAPP ORDER ================= */
+/* =========================================================
+   WHATSAPP ORDER
+========================================================= */
 
 function createOrderMessage() {
 
     if (cart.length === 0) {
-
         return null;
-
     }
 
 
@@ -901,15 +1062,23 @@ function createOrderMessage() {
     cart.forEach(item => {
 
         message +=
-            `• ${item.name} x${item.quantity} — $${(item.price * item.quantity).toFixed(2)}\n`;
+            `• ${item.name} x${item.quantity} — $${(
+                item.price *
+                item.quantity
+            ).toFixed(2)}\n`;
 
     });
 
 
     const total =
         cart.reduce(
-            (sum, item) =>
-                sum + item.price * item.quantity,
+            (
+                sum,
+                item
+            ) =>
+                sum +
+                item.price *
+                item.quantity,
             0
         );
 
@@ -926,12 +1095,13 @@ function createOrderMessage() {
 }
 
 
-orderWhatsapp.addEventListener(
+orderWhatsapp?.addEventListener(
     "click",
     () => {
 
         const message =
             createOrderMessage();
+
 
         if (!message) {
 
@@ -945,84 +1115,159 @@ orderWhatsapp.addEventListener(
 
 
         const url =
-            `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+            `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                message
+            )}`;
 
 
         window.open(
             url,
-            "_blank"
+            "_blank",
+            "noopener"
         );
 
     }
 );
 
 
-/* ================= RESERVATION ================= */
+/* =========================================================
+   RESERVATION
+========================================================= */
 
-reservationForm.addEventListener(
-    "submit",
-    event => {
+if (reservationForm) {
 
-        event.preventDefault();
-
-
-        const name =
-            document.querySelector("#guestName").value.trim();
-
-        const phone =
-            document.querySelector("#guestPhone").value.trim();
-
-        const date =
-            document.querySelector("#reservationDate").value;
-
-        const time =
-            document.querySelector("#reservationTime").value;
-
-        const guests =
-            document.querySelector("#guestCount").value;
-
-
-        let message =
-            "Hello Bean & Brew! ☕\n\n";
-
-        message +=
-            "I'd like to request a table reservation.\n\n";
-
-        message +=
-            `Name: ${name}\n`;
-
-        message +=
-            `Phone: ${phone}\n`;
-
-        message +=
-            `Date: ${date}\n`;
-
-        message +=
-            `Time: ${time}\n`;
-
-        message +=
-            `Guests: ${guests}\n\n`;
-
-        message +=
-            "Please confirm availability. Thank you!";
-
-
-        const url =
-            `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
-
-
-        window.open(
-            url,
-            "_blank"
+    const dateInput =
+        document.querySelector(
+            "#reservationDate"
         );
 
+
+    /* Prevent selecting past dates */
+
+    if (dateInput) {
+
+        const today =
+            new Date();
+
+        const year =
+            today.getFullYear();
+
+        const month =
+            String(
+                today.getMonth() + 1
+            ).padStart(2, "0");
+
+        const day =
+            String(
+                today.getDate()
+            ).padStart(2, "0");
+
+
+        dateInput.min =
+            `${year}-${month}-${day}`;
+
     }
-);
 
 
-/* ================= FOOTER WHATSAPP ================= */
+    reservationForm.addEventListener(
+        "submit",
+        event => {
 
-footerWhatsapp.addEventListener(
+            event.preventDefault();
+
+
+            const name =
+                document
+                    .querySelector(
+                        "#guestName"
+                    )
+                    .value
+                    .trim();
+
+
+            const phone =
+                document
+                    .querySelector(
+                        "#guestPhone"
+                    )
+                    .value
+                    .trim();
+
+
+            const date =
+                document
+                    .querySelector(
+                        "#reservationDate"
+                    )
+                    .value;
+
+
+            const time =
+                document
+                    .querySelector(
+                        "#reservationTime"
+                    )
+                    .value;
+
+
+            const guests =
+                document
+                    .querySelector(
+                        "#guestCount"
+                    )
+                    .value;
+
+
+            let message =
+                "Hello Bean & Brew! ☕\n\n";
+
+
+            message +=
+                "I'd like to request a table reservation.\n\n";
+
+
+            message +=
+                `Name: ${name}\n`;
+
+            message +=
+                `Phone: ${phone}\n`;
+
+            message +=
+                `Date: ${date}\n`;
+
+            message +=
+                `Time: ${time}\n`;
+
+            message +=
+                `Guests: ${guests}\n\n`;
+
+            message +=
+                "Please confirm availability. Thank you!";
+
+
+            const url =
+                `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(
+                    message
+                )}`;
+
+
+            window.open(
+                url,
+                "_blank",
+                "noopener"
+            );
+
+        }
+    );
+
+}
+
+
+/* =========================================================
+   FOOTER WHATSAPP
+========================================================= */
+
+footerWhatsapp?.addEventListener(
     "click",
     event => {
 
@@ -1037,47 +1282,64 @@ footerWhatsapp.addEventListener(
 
         window.open(
             `https://wa.me/${WHATSAPP_NUMBER}?text=${message}`,
-            "_blank"
+            "_blank",
+            "noopener"
         );
 
     }
 );
 
 
-/* ================= TOAST ================= */
+/* =========================================================
+   TOAST
+========================================================= */
 
 let toastTimeout;
 
 
 function showToast(message) {
 
+    if (!toast) return;
+
+
     toast.textContent =
         message;
 
-    toast.classList.add("show");
+    toast.classList.add(
+        "show"
+    );
 
 
-    clearTimeout(toastTimeout);
+    clearTimeout(
+        toastTimeout
+    );
 
 
     toastTimeout =
-        setTimeout(() => {
+        setTimeout(
+            () => {
 
-            toast.classList.remove("show");
+                toast.classList.remove(
+                    "show"
+                );
 
-        }, 2500);
+            },
+            2500
+        );
 
 }
 
 
-/* ================= REVEAL ANIMATION ================= */
+/* =========================================================
+   REVEAL ANIMATION
+========================================================= */
 
 let revealObserver;
 
 
 function observeRevealElements() {
 
-    const revealElements =
+    const elements =
         document.querySelectorAll(
             ".reveal:not(.observed)"
         );
@@ -1087,14 +1349,17 @@ function observeRevealElements() {
 
         revealObserver =
             new IntersectionObserver(
-
                 entries => {
 
-                    entries.forEach(entry => {
+                    entries.forEach(
+                        entry => {
 
-                        if (
-                            entry.isIntersecting
-                        ) {
+                            if (
+                                !entry.isIntersecting
+                            ) {
+                                return;
+                            }
+
 
                             entry.target.classList.add(
                                 "active"
@@ -1104,26 +1369,24 @@ function observeRevealElements() {
                                 "observed"
                             );
 
+
                             revealObserver.unobserve(
                                 entry.target
                             );
 
                         }
-
-                    });
+                    );
 
                 },
-
                 {
-                    threshold: .12
+                    threshold: 0.12
                 }
-
             );
 
     }
 
 
-    revealElements.forEach(
+    elements.forEach(
         element => {
 
             revealObserver.observe(
@@ -1139,7 +1402,9 @@ function observeRevealElements() {
 observeRevealElements();
 
 
-/* ================= ACTIVE NAV ================= */
+/* =========================================================
+   ACTIVE NAVIGATION
+========================================================= */
 
 const sections =
     document.querySelectorAll(
@@ -1154,51 +1419,58 @@ const navLinks =
 
 const sectionObserver =
     new IntersectionObserver(
-
         entries => {
 
-            entries.forEach(entry => {
-
-                if (!entry.isIntersecting)
-                    return;
-
-
-                const currentId =
-                    entry.target.getAttribute(
-                        "id"
-                    );
-
-
-                navLinks.forEach(link => {
-
-                    link.classList.remove(
-                        "active"
-                    );
-
+            entries.forEach(
+                entry => {
 
                     if (
-                        link.getAttribute("href") ===
-                        `#${currentId}`
+                        !entry.isIntersecting
                     ) {
-
-                        link.classList.add(
-                            "active"
-                        );
-
+                        return;
                     }
 
-                });
 
-            });
+                    const currentId =
+                        entry.target.getAttribute(
+                            "id"
+                        );
+
+
+                    navLinks.forEach(
+                        link => {
+
+                            link.classList.remove(
+                                "active"
+                            );
+
+
+                            if (
+                                link.getAttribute(
+                                    "href"
+                                ) ===
+                                `#${currentId}`
+                            ) {
+
+                                link.classList.add(
+                                    "active"
+                                );
+
+                            }
+
+                        }
+                    );
+
+                }
+            );
 
         },
-
         {
             rootMargin:
                 "-40% 0px -50% 0px",
+
             threshold: 0
         }
-
     );
 
 
@@ -1213,23 +1485,28 @@ sections.forEach(
 );
 
 
-/* ================= CLOSE MOBILE MENU OUTSIDE ================= */
+/* =========================================================
+   CLOSE MOBILE MENU OUTSIDE
+========================================================= */
 
 document.addEventListener(
     "click",
     event => {
 
-        const clickedInsideNavbar =
-            navbar.contains(event.target);
+        if (!navbar) return;
 
-        const clickedInsideMobileNav =
-            mobileNav.contains(event.target);
+
+        const clickedInsideNavbar =
+            navbar.contains(
+                event.target
+            );
 
 
         if (
             !clickedInsideNavbar &&
-            !clickedInsideMobileNav &&
-            navbar.classList.contains("menu-open")
+            navbar.classList.contains(
+                "menu-open"
+            )
         ) {
 
             closeMobileMenu();
@@ -1240,7 +1517,9 @@ document.addEventListener(
 );
 
 
-/* ================= ESCAPE KEY ================= */
+/* =========================================================
+   ESCAPE KEY
+========================================================= */
 
 document.addEventListener(
     "keydown",
@@ -1260,7 +1539,9 @@ document.addEventListener(
 );
 
 
-/* ================= INITIALIZE ================= */
+/* =========================================================
+   INITIALIZE
+========================================================= */
 
 renderMenu();
 
